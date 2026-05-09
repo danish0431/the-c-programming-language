@@ -16,4 +16,5 @@ int main() {
         printf("%3.0f \t %6.1f\n", fahr, celcius);
         fahr = fahr + step;
     }
+    return 0;
 }

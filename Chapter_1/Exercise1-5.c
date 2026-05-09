@@ -1,6 +1,5 @@
 #include<stdio.h>
-/* print Farenhiet-Celcius table
-    for fahr = 0, 20, ..., 300; floating-point version */
+/* print Celcius-Farenhiet table in reverse order from 300 degree to 0 */
 int main() {
     float fahr, celcius;
     float lower, upper, step;
@@ -9,12 +8,12 @@ int main() {
     upper = 300;    /* upper limit */
     step = 20;      /* step size */
 
-    fahr = lower;
+    celcius = upper;
     printf("Celcius Farenhiet\n");
-    while(fahr <= upper) {
-        celcius = (5.0/9.0) * (fahr-32.0);
+    while(celcius >= lower) {
+        fahr = ((9.0/5.0) * celcius)+32.0;
         printf("%6.1f \t %3.0f\n", celcius, fahr);
-        fahr = fahr + step;
+        celcius = celcius - step;
     }
     return 0;
 }
